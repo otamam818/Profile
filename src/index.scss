@@ -1,0 +1,85 @@
+@use './shadows';
+
+body {
+    background-color: green;
+    background-image: url(./images/Bangladesh.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: white;
+}
+
+.info-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 6vw;
+
+    img {
+        width: 30vw;
+        border-radius: 50%;
+    }
+
+    .text-info {
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 5.5vw;
+
+        #name {
+            font-size: 5.75vw;
+            font-weight: bold;
+        }
+
+        #profession {
+            font-size: 4.5vw;
+            letter-spacing: -0.04em;
+            color: #ffffffa6;
+        }
+    }
+
+}
+
+.info-container {
+    .container-data {
+        background-color: #00000061;
+        margin: 5vw;
+        padding: 3vw;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+        margin-top: calc(5vw + 2.5vh);
+        box-shadow: shadows.$black-shadow-3l;
+
+        #description {
+            position: absolute;
+            top: calc(-1.55vh - 3vw);
+            left: 13px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            font-variant-caps: all-small-caps;
+        }
+        .iconify {
+            display: inline-block;
+            color: #759a65;
+            margin-right: 8px;
+        }
+    }
+}
+
+.settings {
+    background-color: #570000a6;
+    margin: 5.0vw;
+    padding: 3vw;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    margin-top: 0;
+
+    label {
+        font-variant-caps: petite-caps;
+        margin-left: 10px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        font-size: 0.90em;
+    }
+}
+
