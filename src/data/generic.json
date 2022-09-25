@@ -1,9 +1,12 @@
 {
-    "picture" : "me-square.png",
+    "picture" : "Imaginaria.jpeg",
     "name" : {
         "first" : "Tahmin",
         "last" : "Ahmed"
     },
-    "profession" : "Computer Scientist"
+    "descriptions" : [
+        "Computer Scientist",
+        "Saudi-Arabian Born Enthusiast"
+    ]
 }
 

@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import AdditionalInfo from './AdditionalInfo';
-import GeneralID from './GeneralID';
+import './index.scss';
 
-const initialData = new Set(['phone', 'address']);
+import BasicData from './components/BasicData/BasicData';
+import DataShowCase from './components/DataShowCase/DataShowCase';
+import SpecificData from './components/SpecificData/SpecificData';
 
 function Index () {
-    let [data, setData] = useState( initialData );
+    const generalData = useState(require('./data/generic.json'))[0];
+    const specificData = require('./data/specific.json');
+    let [shownData, setShownData] = useState(['phone', 'email']);
+
+    let [visibleShowcase, setVisibleShowcase] = useState(false);
     return (
       <>
-        <GeneralID currData={data} dataSetter={setData}/>
-        <AdditionalInfo data={data}/>
+        <BasicData 
+          pictureSrc={generalData.picture}
+          description={generalData.descriptions[0]} 
+          name={generalData.name.first + ' ' + generalData.name.last}
+          visibleShowcase={visibleShowcase}
+          setVisibleShowcase={setVisibleShowcase}
+        />
+        <DataShowCase
+          specificData={specificData}
+          shownData={shownData}
+          setShownData={setShownData}
+          visibleShowcase={visibleShowcase}
+        />
+        <SpecificData
+          specificData={specificData}
+          shownData={shownData}
+        />
       </>
     )
 }
@@ -23,9 +41,4 @@ root.render(
     <Index />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 
