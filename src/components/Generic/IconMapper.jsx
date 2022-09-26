@@ -1,7 +1,8 @@
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-import { HiHome, HiIdentification } from "react-icons/hi";
+import { HiHome, HiIdentification, HiLocationMarker } from "react-icons/hi";
 import { MdChevronRight } from "react-icons/md";
+import { FaCalendarAlt, FaPassport } from "react-icons/fa";
 
 function IconMapper ( { iconName } ) {
     let component;
@@ -21,6 +22,18 @@ function IconMapper ( { iconName } ) {
 
         case 'student ID':
             component = <HiIdentification />;
+            break;
+
+        case 'date of birth':
+            component = <FaCalendarAlt />;
+            break;
+
+        case 'nationality':
+            component = <FaPassport />;
+            break;
+
+        case 'place of birth':
+            component = <HiLocationMarker />;
             break;
 
         default:
