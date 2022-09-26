@@ -1,0 +1,31 @@
+
+.fancy-background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    .circle1 {
+        width: 160vw;
+        height: 160vw;
+        background-color: var(--accent-color__900);
+        position: relative;
+        filter: blur(400px) brightness(55%);
+        border-radius: 100%;
+        animation: slide-to-bottom 15s ease-in-out infinite;
+    }
+}
+
+@keyframes slide-to-bottom {
+    0%, 100% {
+        top: 0%;
+        left: 0%;
+    }
+    50% {
+        top: 60%;
+        left: calc(0% + 30vh);
+    }
+}
+

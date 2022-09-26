@@ -5,6 +5,7 @@ import './index.scss';
 import BasicData from './components/BasicData/BasicData';
 import DataShowCase from './components/DataShowCase/DataShowCase';
 import SpecificData from './components/SpecificData/SpecificData';
+import FancyBackground from './components/Generic/FancyBackground.jsx';
 
 function Index () {
     const generalData = useState(require('./data/generic.json'))[0];
@@ -31,6 +32,7 @@ function Index () {
           specificData={specificData}
           shownData={shownData}
         />
+        <FancyBackground />
       </>
     )
 }

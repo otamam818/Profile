@@ -1,4 +1,5 @@
 import '../../styles/specific_data.scss';
+import IconMapper from '../Generic/IconMapper';
 
 function SpecificData ( { specificData, shownData } ) {
     let dataComponents = shownData.map( (data, index) => {
@@ -8,7 +9,8 @@ function SpecificData ( { specificData, shownData } ) {
               {data}
             </label>
             <label className='info'>
-              {specificData[data]}
+              <IconMapper iconName={data} />
+              <div>{specificData[data]}</div>
             </label>
           </div>
         )
