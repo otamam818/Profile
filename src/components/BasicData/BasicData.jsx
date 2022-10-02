@@ -1,17 +1,16 @@
 import '../../styles/basic_data.scss';
 import ImageHolder from './ImageHolder';
 import TitleHolder from './TitleHolder';
-import HamBurger from './HamBurger';
 
 function BasicData ( { pictureSrc, name, description, visibleShowcase, setVisibleShowcase } ) {
     return (
         <div className='basic-data'>
-          <ImageHolder pictureSrc={pictureSrc}/>
-          <TitleHolder name={name} description={description}/>
-          <HamBurger
+          <ImageHolder
+            pictureSrc={pictureSrc}
             visibleShowcase={visibleShowcase}
             setVisibleShowcase={setVisibleShowcase}
           />
+          <TitleHolder name={name} description={description}/>
         </div>
     )
 }

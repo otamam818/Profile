@@ -16,6 +16,10 @@ function IconMapper ( { iconName } ) {
             component = <IoMdMail />;
             break;
 
+        case 'student email':
+            component = <IoMdMail />;
+            break;
+
         case 'address':
             component = <HiHome />;
             break;
